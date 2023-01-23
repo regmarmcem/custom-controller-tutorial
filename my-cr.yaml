@@ -5,3 +5,4 @@ metadata:
 spec:
   image: mc-image
   message: "This is the first Custom Resource"
+  replicas: 1

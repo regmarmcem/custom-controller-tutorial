@@ -25,8 +25,16 @@ spec:
                 type: string
               message:
                 type: string
+              replicas:
+                type: integer
             required:
               - message
+    subresources:
+      status: {}
+      scale:
+        specReplicasPath: .spec.replicas
+        statusReplicasPath: .status.replicas
+        labelSelectorPath: .status.labelSelector
     additionalPrinterColumns:
     - name: message
       type: string
