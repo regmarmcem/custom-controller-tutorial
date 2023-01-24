@@ -19,7 +19,10 @@ spec: {
 			properties: spec: {
 				type: "object"
 				properties: {
-					image: type: "string"
+					image: {
+						type:    "string"
+						default: "nginx:latest"
+					}
 					message: type: "string"
 					replicas: type: "integer"
 				}
